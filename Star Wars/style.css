@@ -1,0 +1,41 @@
+body{
+	background-color: white;
+}
+
+
+.title{
+	background-image: url(Images/wallpaper1.jpg);
+	background-size: cover;
+ 	background-position: center;
+  	height: 350px;
+}
+.title2{
+	background-image: url(Images/wallpaper2.jpg);
+	background-size: cover;
+ 	background-position: center;
+  	height: 350px;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(240, 255, 255, 0.9);
+  display:block;
+  font-family: 'geostar fill';
+  font-size: 25px;
+  font-style:italic;
+  line-height:30px;
+  margin-left: 0px;
+  padding:15px;
+  position: relative;
+  top: 75%;
+  width:center;
+}
+
+.contenedor{
+	height:650px;
+	width:550px;
+	margin:20px;
+	padding: 20px;
+	background-color: white;
+	float: left;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Star Wars Characters</title>
+
+	<meta name="description" content="Arturo Atencio"/>
+	<meta charset="utf-8">
+	<meta name="author" content="Arturo">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Geostar+Fill" rel="stylesheet">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/parallax.js"></script>
+	<script type="text/javascript" src="js/nicescroll.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			var position = window.location.href.slice(window.location.href.indexOf('?') + 1);
+			$.getJSON("http://swapi.co/api/people/"+ position, function( data ) {
+				
+					$('#main_list li').remove();
+					
+					var count = 0;
+					$.each(data, function(key, val ) {
+					
+						$('#main_list').append('<li> <span>'+ 
+						key +': '+ val +
+						'</span> </li></a>');
+						count++;
+						if(count == 8)
+						{
+							return false;
+						}
+
+				  	});
+				  	
+				
+				});
+    	});
+	</script>
+</head>
+<body>
+	
+	<div class="title2"> /*diseño parte superio - logo*/
+		<h1 class="caption" > Character Details</h1>
+	</div>
+				<div class="contenedor">
+					<div>
+						<img src="images/wookie.png" alt="Wookie" titl="Wookie">
+					</div>
+				</div>
+				<div class="contenedor">
+					<div >
+						<h1>Detalles del Personaje:</h1>
+						<ul id="main_list" class="list-unstyled">
+							<li><img src="images/loading2.gif" alt="Storm Trooper" titl=""></li>
+						</ul>
+						<a href="main.html">
+							<span>Regresar</span>
+						</a>
+					</div>					
+				</div>
+</body>
+</html>
